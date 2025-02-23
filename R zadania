@@ -1,0 +1,44 @@
+# 5. Stwórz funkcję będącą najprostszą wersją kalkulatora 
+# (dodawanie, odejmowanie, mnożenie albo dzielenie dwóch liczb).
+
+kalkulator = function(dzialanie,x,y) {
+  if(dzialanie=="D") {
+    wynik = x+y
+  } else if(dzialanie=="O") {
+    wynik = x-y
+  } else if(dzialanie=="M") {
+    wynik = x*y
+  } else if(dzialanie=="DZ") {
+    wynik = x/y
+  } else {
+    print("błąd")
+  }
+  return(wynik)
+}
+
+kalkulator("M",4,3)
+kalkulator("m",4,5)
+kalkulator("O",7,6)
+
+
+  # 7. Stwórz funkcję obliczającą podatek w zależności od dochodu. 
+# Przyjmij następujące założenia:
+# a) Jeżeli podatnik rozlicza się liniowo, wtedy niezależnie od kwoty płaci 19% podatku.
+# b) Jeżeli podatnik rozlicza się na zasadach ogólnych, wtedy:
+# - poniżej kwoty 85528zł płaci 18% podatku minus kwota zmniejszająca, czyli 556zł;
+# - powyżej kwoty 85528zł płaci 14839zł + 32% nadwyżki powyżej 85528zł.
+
+podatek=function(rozliczenie,a) {
+  if(rozliczenie=="L") {
+    wynik = a*19/100
+  } else if(rozliczenie=="O") {
+      if(a<85528) {
+        wynik = a*18/100 - 556
+      } else if (a>85528) {
+        wynik = 14839 + (a-85528)*32/100
+      }
+  }
+  return(wynik)
+}
+podatek("L",8888)
+podatek("O",88888)
