@@ -67,4 +67,20 @@ wordcloud(frequent_terms2024$WORD, frequent_terms2024$FREQ, max.words = 5, color
 ?brewer.pal
 brewer.pal.info
 
+# Najczestsze słowa w 2021: 
+# 1.American 
+# 2.Jobs
+# 3.Plan
+# 4.Americans
+# 5.Act
+# 6.Families 
+# 
+# Najczestsze słowa w 2024:
+# 1. President
+# 2. American
+# 3. Future
+# 4. Years
+# 5. Pay
+# 6. Americans
+
 
